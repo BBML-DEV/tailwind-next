@@ -7,9 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        app: 'minmax(18rem, 20rem) 1fr',
+      },
       colors: {
-        purple: "#8257e6"
-      }
+        brand: '#8257e6',
+      },
     },
   },
   plugins: [],
