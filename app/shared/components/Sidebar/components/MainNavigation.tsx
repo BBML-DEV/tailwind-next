@@ -7,7 +7,7 @@ import {
   SquareStack,
   Users,
 } from 'lucide-react'
-import { NavItem } from './Navitem'
+import { NavItem } from './NavItem'
 
 const NavItemContent = [
   { title: 'Home', icon: Home },
@@ -22,7 +22,12 @@ export const MainNavigation = () => {
   return (
     <nav className="space-y-0.5">
       {NavItemContent.map((item) => (
-        <NavItem key={item.title} icon={item.icon} title={item.title} />
+        <NavItem
+          key={item.title}
+          icon={item.icon}
+          title={item.title}
+          hasArrow={true}
+        />
       ))}
     </nav>
   )
