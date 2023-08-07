@@ -9,9 +9,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         app: 'minmax(18rem, 20rem) 1fr',
-      },
-      colors: {
-        brand: '#8257e6',
+        profile: 'max-content 1fr max-content',
       },
     },
   },
