@@ -1,4 +1,3 @@
-import { Search } from 'lucide-react'
 import React, { ComponentProps } from 'react'
 
 type InputPrefixProps = ComponentProps<'div'>

@@ -5,7 +5,7 @@ import { MainNavigation } from './components/MainNavigation'
 import { NavItem } from './components/NavItem'
 import { UseSpacingWidget } from './components/UseSpacingWidget'
 import { UserProfile } from './components/UserProfile'
-import { InputController, InputPrefix, InputRoot } from '../Input'
+import { InputController, InputPrefix, InputRoot } from '../Form/Input'
 
 export const Sidebar = () => {
   return (
