@@ -104,7 +104,7 @@ export default function Home() {
               <Input.InputController
                 id="role"
                 type="text"
-                defaultValue="Product Designer"
+                defaultValue="Developer Junior"
               />
             </Input.InputRoot>
           </div>
@@ -154,6 +154,7 @@ export default function Home() {
             </label>
             <FileInput.Root>
               <FileInput.Trigger />
+              <FileInput.FilesList />
               <FileInput.Control multiple />
             </FileInput.Root>
           </div>
