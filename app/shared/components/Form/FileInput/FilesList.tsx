@@ -6,7 +6,13 @@ import { Trash2, UploadCloud } from 'lucide-react'
 import { formatBytes } from '@/app/shared/utils/format-bytes'
 
 export const FilesList = () => {
-  const { files } = useFileInput()
+  const { files, deleteFiles } = useFileInput()
+
+  console.log(files)
+
+  function handleDelete(name: string) {
+    deleteFiles(name)
+  }
 
   return (
     <div className="mt-6 space-y-4">
@@ -37,7 +43,11 @@ export const FilesList = () => {
             </div>
           </div>
 
-          <button type="button" className=" rounded-md p-2 hover:bg-zinc-50">
+          <button
+            type="button"
+            className="rounded-md p-2 hover:bg-zinc-50"
+            onClick={() => handleDelete(file.name)}
+          >
             <Trash2 className="h-5 w-5 text-zinc-500 hover:text-red-600" />
           </button>
         </div>
