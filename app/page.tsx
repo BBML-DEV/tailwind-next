@@ -14,6 +14,7 @@ import {
 import * as FileInput from './shared/components/Form/FileInput'
 import { Select } from './shared/components/Form/Select'
 import { SelectItem } from '@/app/shared/components/Form/Select/SelectItem'
+import { TextArea } from './shared/components/Form/Textarea'
 
 export default function Home() {
   return (
@@ -205,6 +206,11 @@ export default function Home() {
                   </button>
                 </div>
               </div>
+
+              <TextArea
+                id="bio"
+                defaultValue={"I'm a computer science student"}
+              />
             </div>
           </div>
 
