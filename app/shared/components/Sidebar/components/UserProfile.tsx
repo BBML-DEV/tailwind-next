@@ -1,5 +1,6 @@
 import { LogOut } from 'lucide-react'
 import React from 'react'
+import { Button } from '../../Button'
 
 export const UserProfile = () => {
   return (
@@ -17,9 +18,9 @@ export const UserProfile = () => {
         </span>
       </div>
 
-      <button type="button" className="ml-auto">
+      <Button type="button" className="ml-auto">
         <LogOut className="h-5 w-5 text-zinc-500 hover:text-violet-500" />
-      </button>
+      </Button>
     </div>
   )
 }
