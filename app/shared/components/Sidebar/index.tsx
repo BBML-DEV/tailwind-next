@@ -1,37 +1,53 @@
+'use client'
+
 import React from 'react'
 import { Logo } from './components/Logo'
-import { Cog, LifeBuoy, Search } from 'lucide-react'
+import { Cog, LifeBuoy, Menu, Search } from 'lucide-react'
 import { MainNavigation } from './components/MainNavigation'
 import { NavItem } from './components/NavItem'
 import { UseSpacingWidget } from './components/UseSpacingWidget'
 import { UserProfile } from './components/UserProfile'
 import { InputController, InputPrefix, InputRoot } from '../Form/Input'
+import * as Collapsible from '@radix-ui/react-collapsible'
+import { Button } from '../Button'
 
 export const Sidebar = () => {
   return (
-    <aside className="fixed bottom-0 left-0 right-0 top-0 z-20 flex flex-col gap-6 border-b border-zinc-200 bg-white p-4 lg:relative lg:right-auto lg:w-80 lg:border-r lg:px-5 lg:py-8">
-      <Logo />
-      <InputRoot>
-        <InputPrefix>
-          <Search className="h-5 w-5 text-zinc-500" />
-        </InputPrefix>
-        <InputController placeholder="Search" />
-      </InputRoot>
-
-      <MainNavigation />
-
-      <div className="mt-auto flex flex-col gap-6">
-        <nav className="space-y-0.5">
-          <NavItem title="Support" icon={LifeBuoy} hasArrow={false} />
-          <NavItem title="Settings" icon={Cog} hasArrow={false} />
-        </nav>
-
-        <UseSpacingWidget />
-
-        <div className="h-px rounded bg-zinc-300"></div>
-
-        <UserProfile />
+    <Collapsible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col gap-6 border-b border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 lg:right-auto lg:w-80 lg:border-r lg:px-5 lg:py-8 lg:data-[state=closed]:bottom-0">
+      <div className="flex items-center justify-between">
+        <Logo />
+        <Collapsible.Trigger asChild className="lg:hidden">
+          <Button variant="ghost">
+            <Menu className="h-6 w-6" />
+          </Button>
+        </Collapsible.Trigger>
       </div>
-    </aside>
+      <Collapsible.Content
+        forceMount
+        className="flex flex-1 flex-col gap-6 data-[state=closed]:hidden lg:data-[state=closed]:flex"
+      >
+        <InputRoot>
+          <InputPrefix>
+            <Search className="h-5 w-5 text-zinc-500" />
+          </InputPrefix>
+          <InputController placeholder="Search" />
+        </InputRoot>
+
+        <MainNavigation />
+
+        <div className="mt-auto flex flex-col gap-6">
+          <nav className="space-y-0.5">
+            <NavItem title="Support" icon={LifeBuoy} hasArrow={false} />
+            <NavItem title="Settings" icon={Cog} hasArrow={false} />
+          </nav>
+
+          <UseSpacingWidget />
+
+          <div className="h-px rounded bg-zinc-300"></div>
+
+          <UserProfile />
+        </div>
+      </Collapsible.Content>
+    </Collapsible.Root>
   )
 }

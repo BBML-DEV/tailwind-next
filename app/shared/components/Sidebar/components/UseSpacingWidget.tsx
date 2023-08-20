@@ -2,7 +2,7 @@ import React from 'react'
 
 export const UseSpacingWidget = () => {
   return (
-    <div className="flex flex-col gap-4 rounded-lg bg-violet-50 px-4 py-5">
+    <div className="mt-auto flex flex-col gap-4 rounded-lg bg-violet-50 px-4 py-5">
       <div className="space-y-1">
         <span className="text-sm/5 font-medium text-violet-700">
           Used space
