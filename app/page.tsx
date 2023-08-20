@@ -2,15 +2,7 @@
 
 import { SettingsTabs } from './shared/components/SettingsTabs'
 import * as Input from './shared/components/Form/Input'
-import {
-  Bold,
-  Italic,
-  Link,
-  List,
-  ListOrdered,
-  LogOut,
-  Mail,
-} from 'lucide-react'
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 import * as FileInput from './shared/components/Form/FileInput'
 import { Select } from './shared/components/Form/Select'
 import { SelectItem } from '@/app/shared/components/Form/Select/SelectItem'
@@ -24,7 +16,7 @@ export default function Home() {
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex w-full items-center justify-between border-b border-zinc-200 pb-5">
+        <div className="flex w-full flex-col items-start justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center">
           <div className="space-y-1">
             <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
             <span className="text-sm text-zinc-500">
@@ -46,14 +38,14 @@ export default function Home() {
           id="settings"
           className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
         >
-          <div className="grid grid-cols-form gap-3">
+          <div className="flex flex-col gap-3 lg:grid lg:grid-cols-form">
             <label
               htmlFor="firstName"
               className="text-sm font-medium text-zinc-700"
             >
               Name
             </label>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2">
               <Input.InputRoot>
                 <Input.InputController id="firstName" defaultValue="Paulo" />
               </Input.InputRoot>
@@ -64,7 +56,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="email"
               className="text-sm font-medium text-zinc-700"
@@ -84,7 +76,7 @@ export default function Home() {
             </Input.InputRoot>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col items-start gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="photo"
               className="flex flex-col gap-0.5 text-sm font-medium text-zinc-700"
@@ -102,7 +94,7 @@ export default function Home() {
             </FileInput.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label htmlFor="role" className="text-sm font-medium text-zinc-700">
               Role
             </label>
@@ -116,7 +108,7 @@ export default function Home() {
             </Input.InputRoot>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="country"
               className="text-sm font-medium text-zinc-700"
@@ -130,7 +122,7 @@ export default function Home() {
             </Select>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="timezone"
               className="text-sm font-medium text-zinc-700"
@@ -146,7 +138,7 @@ export default function Home() {
             </Select>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="bio"
               className="flex flex-col gap-0.5 text-sm font-medium text-zinc-700"
@@ -193,7 +185,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="projects"
               className="flex flex-col gap-0.5 text-sm font-medium text-zinc-700"
