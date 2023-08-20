@@ -4,18 +4,18 @@ import React from 'react'
 import { useFileInput } from './Root'
 import { Trash2, UploadCloud } from 'lucide-react'
 import { formatBytes } from '@/app/shared/utils/format-bytes'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 export const FilesList = () => {
   const { files, deleteFiles } = useFileInput()
-
-  console.log(files)
+  const [parent] = useAutoAnimate()
 
   function handleDelete(name: string) {
     deleteFiles(name)
   }
 
   return (
-    <div className="mt-6 space-y-4">
+    <div ref={parent} className="mt-6 space-y-4">
       {files.map((file) => (
         <div
           key={file.name}
