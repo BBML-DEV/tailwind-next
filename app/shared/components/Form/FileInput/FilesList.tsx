@@ -12,7 +12,12 @@ export const FilesList = () => {
   return (
     <div ref={parent} className="mt-6 space-y-4">
       {files.map((file) => (
-        <FileItem name={file.name} size={file.size} key={file.name} />
+        <FileItem
+          name={file.name}
+          size={file.size}
+          key={file.name}
+          state="error"
+        />
       ))}
     </div>
   )
