@@ -1,6 +1,5 @@
-import React from 'react' // Import React
 import { ChevronDown } from 'lucide-react'
-import { ElementType } from 'react'
+import React, { ElementType } from 'react'
 
 interface NavItemProps {
   title: string
