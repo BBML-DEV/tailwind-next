@@ -1,14 +1,17 @@
 import { LogOut } from 'lucide-react'
 import React from 'react'
 import { Button } from '../../Button'
+import Image from 'next/image'
 
 export const UserProfile = () => {
   return (
     <div className="grid grid-cols-profile items-center gap-3">
-      <img
+      <Image
+        width={40}
+        height={40}
         src="https://github.com/BBML-DEV.png"
         alt=""
-        className="h-10 w-10 overflow-hidden rounded-full"
+        className=" overflow-hidden rounded-full"
       />
 
       <div className="flex flex-col truncate">

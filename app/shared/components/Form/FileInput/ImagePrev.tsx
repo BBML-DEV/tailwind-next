@@ -3,6 +3,7 @@
 import { User } from 'lucide-react'
 import { useMemo } from 'react'
 import { useFileInput } from './Root'
+import Image from 'next/image'
 
 export const ImagePrev = () => {
   const { files } = useFileInput()
@@ -23,7 +24,7 @@ export const ImagePrev = () => {
     )
   } else {
     return (
-      <img
+      <Image
         src={previewURL}
         alt=""
         className="h-16 w-16 rounded-full object-cover"
