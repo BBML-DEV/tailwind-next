@@ -16,7 +16,7 @@ export const FilesList = () => {
           name={file.name}
           size={file.size}
           key={file.name}
-          state="error"
+          state="complete"
         />
       ))}
     </div>

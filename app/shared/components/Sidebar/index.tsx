@@ -18,7 +18,7 @@ export const Sidebar = () => {
         <Logo />
         <Collapsible.Trigger asChild className="lg:hidden">
           <Button variant="ghost">
-            <Menu className="h-6 w-6" />
+            <Menu className="h-6 w-6 dark:text-zinc-100" />
           </Button>
         </Collapsible.Trigger>
       </div>
@@ -43,7 +43,7 @@ export const Sidebar = () => {
 
           <UseSpacingWidget />
 
-          <div className="h-px rounded bg-zinc-300"></div>
+          <div className="h-px rounded bg-zinc-300 dark:bg-zinc-700"></div>
 
           <UserProfile />
         </div>
