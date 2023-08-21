@@ -12,14 +12,16 @@ export const UserProfile = () => {
       />
 
       <div className="flex flex-col truncate">
-        <span className="text-sm font-semibold text-zinc-700">Paulo Vitor</span>
+        <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-100">
+          Paulo Vitor
+        </span>
         <span className="truncate text-sm text-zinc-500">
           pvmldev@gmail.com
         </span>
       </div>
 
-      <Button type="button" className="ml-auto">
-        <LogOut className="h-5 w-5 text-zinc-500 hover:text-violet-500" />
+      <Button type="button" className="ml-auto" variant="ghost">
+        <LogOut className="h-5 w-5 text-zinc-500 hover:text-violet-500 dark:text-zinc-400" />
       </Button>
     </div>
   )

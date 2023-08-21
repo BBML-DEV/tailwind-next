@@ -11,12 +11,12 @@ export type SelectItemProps = Select.SelectItemProps & {
 export const SelectItem = ({ text, ...props }: SelectItemProps) => {
   return (
     <Select.Item
-      className="flex items-center justify-between gap-2 px-3 py-2.5 outline-none"
+      className="flex items-center justify-between gap-2 px-3 py-2.5 outline-none dark:text-zinc-100"
       {...props}
     >
       <Select.ItemText className="text-black">{text}</Select.ItemText>
       <Select.ItemIndicator>
-        <Check className="h-4 w-4 text-violet-500" />
+        <Check className="h-4 w-4 text-violet-500 dark:text-zinc-100" />
       </Select.ItemIndicator>
     </Select.Item>
   )
